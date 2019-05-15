@@ -5,46 +5,6 @@ from op import req, qtdRel, rest, pMuta, pCruzamento, tamPop, nDeGer
 import operator
 import random
 
-'''
-s1=indiv(rest, req, qtdRel, 0)
-print('S1',s1.crom)
-print('custo das releases S1',s1.custosRel)
-print ('apitidao S1',s1.fit)
-
-s2=indiv(rest, req, qtdRel, 0)
-print('S2', s2.crom)
-print('custo das releases S2',s2.custosRel)
-print ('apitidao S2',s2.fit)
-
-#s1.muta(pMuta)
-#print('indiduo',s1.crom)
-#print ('apitidao',s1.fit)
-#print('custo das releases',s1.custosRel)
-
-
-f=cruza(s1, s2)
-s3=f[0]
-s4=f[1]
-print("S3", s3.crom)
-print('custo das releases S3',s3.custosRel)
-print ('apitidao S3',s3.fit)
-print("S4", s4.crom)
-print('custo das releases S4',s4.custosRel)
-print ('apitidao S4',s4.fit)
-
-pop=[]
-for i in range(tamPop):
-    pop.append(indiv(rest, req, qtdRel, 0))
-
-pop.sort(key=operator.attrgetter('fit'), reverse=1)
-
-for i in range(len(pop)):
-    print('\nS'+str(i),pop[i].crom,'\nFitness:',pop[i].fit,'\nCusto:',pop[i].custosRel)
-
-a=torneioBinario(pop)
-print("mio", a.fit)
-'''
-
 pop=[]
 des=[]
 proxPop=[]
