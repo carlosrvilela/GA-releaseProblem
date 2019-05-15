@@ -1,7 +1,6 @@
 from indiv import indiv
 import random
 
-
 '''
 requisito: custo, risco, importacia
 r1, r2...
@@ -55,7 +54,6 @@ pCruzamento=90#taxa de cruzamento 0 a 100
 
 def cruza(paiA,paiB):
     quebra=random.randint(1,(paiA.tamCrom-1))
-    #print("Q",quebra)
     vetA=[]
     vetB=[]
     for i in range(paiA.tamCrom):
@@ -67,9 +65,6 @@ def cruza(paiA,paiB):
 
     for i in range(quebra):
         vetB.append(paiB.crom[i])
-
-    #print('A',vetA)
-    #print('B',vetB)
 
     filhoA=indiv(rest, req, qtdRel, 1)
     filhoA.setCrom(vetA)
@@ -96,24 +91,12 @@ def repara(ind):
     vetA = []
     for i in range (ind.tamCrom):
         if(ind.crom[i]!=0):
-            #print(custosR[ind.crom[i]],"+",ind.req[i][0],"<=",ind.rest)
             if(custosR[ind.crom[i]]+ind.req[i][0]<=ind.rest):
-                #print('banana')
                 vetA.append(ind.crom[i])
             else:
-                '''
-                #print('fakeBanana0')
-                a = random.randint(0, ind.qtdRel)
-                while ((custosR[ind.crom[a]]+ind.req[i][0] > ind.rest) & a!=0):
-                    #print(custosR[ind.crom[a]], "+", ind.req[i][0], ">", ind.rest)
-                    a = random.randint(0, ind.qtdRel)
-                    #print(a)
-                '''
                 vetA.append(0)
         else:
-            #print('banana0')
             vetA.append(ind.crom[i])
         custosR[ind.crom[i]]=custosR[ind.crom[i]]+ind.req[i][0]
 
-    #print('ind', vetA)
     ind.setCrom(vetA)
