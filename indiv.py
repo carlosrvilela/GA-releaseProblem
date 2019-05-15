@@ -56,21 +56,16 @@ class indiv:
             a = random.randint(1, 100)
             if(a<=p):
                 b = random.randint(0, self.qtdRel)
-                #print('r ',b)
                 if(b!=0):
-                    #print(custos[b],'+',self.req[i][0],'<=',self.rest)
                     if((custos[b] + self.req[i][0])<=self.rest):
                         custos[self.crom[i]] = custos[self.crom[i]] - self.req[i][0]
-                        #print('banana')
                         self.crom[i] = b
                         custos[self.crom[i]] = custos[self.crom[i]] + self.req[i][0]
                 else:
-                    #print('banana 0')
                     custos[self.crom[i]] = custos[self.crom[i]] - self.req[i][0]
                     self.crom[i] = b
                     custos[self.crom[i]] = custos[self.crom[i]] + self.req[i][0]
 
-        #print('c: ',custos)
         self.custosRel=custos
         self.fit = indiv.score(self.tamCrom, self.crom, self.req, self.qtdRel)
 
