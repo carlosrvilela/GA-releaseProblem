@@ -47,4 +47,5 @@ for n in range (nDeGer):
               '\nCusto:',pop[i].custosRel,'\t\t\t\t','Custo:',des[i].custosRel,'\t\t\t\t','Custo:',proxPop[i].custosRel)
     pop=proxPop
     des=[]
+    proxPop=[]
 
