@@ -55,11 +55,6 @@ def AG():
 
     pop.sort(key=operator.attrgetter('fit'), reverse=1)
     melhorInd=pop[0]
-    '''
-    print('Melhor Solucao:', melhorInd.crom,
-          '\nFitness:', melhorInd.fit,
-          '\nCusto:', melhorInd.custosRel)
-    '''
     return (melhorInd)
 
 rep=30
